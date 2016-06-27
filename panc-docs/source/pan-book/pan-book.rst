@@ -1928,7 +1928,7 @@ be assigned to a given identifier. Attempts to redefine an existing
 function will cause the execution to be aborted. The syntax for defining
 a function is::
 
-    function  = DML;
+    function identifier = DML;
 
 where identifier is a valid pan identifier and DML is the block to bind
 to it.
@@ -2871,7 +2871,7 @@ object template. This is particularly appropriate for metadata like
 build numbers, build times, build machines, etc. This can be achieved by
 setting the root element that is used to start the build of all
 profiles. Use the ``rootElement`` attribute for ant and the
-``--root-element`` option for the command line. The value must be a DML
+``--initial-data`` option for the command line. The value must be a DML
 expression that evaluates to an dict. For example, this expression
 
 ::

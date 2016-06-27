@@ -21,6 +21,10 @@ import org.quattor.pan.exceptions.CompilerError;
 import org.quattor.pan.template.Template;
 import org.quattor.pan.utils.MessageUtils;
 
+/**
+ * Contains extra information and validation checks regarding source files.
+ */
+
 @Immutable
 public class SourceFile implements Comparable<SourceFile> {
 
@@ -28,8 +32,10 @@ public class SourceFile implements Comparable<SourceFile> {
 
     private final SourceType type;
 
+    // Path to directory where file resides
     private final File location;
 
+    // Path to file
     private final File path;
 
     public SourceFile(String name, boolean isSource, File path)

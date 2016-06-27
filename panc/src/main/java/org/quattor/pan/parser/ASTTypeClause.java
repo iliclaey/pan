@@ -22,6 +22,9 @@ package org.quattor.pan.parser;
 
 import org.quattor.pan.utils.Range;
 
+/**
+ * Represents a link, list-range or dict-range in the AST.
+ */
 public class ASTTypeClause extends SimpleNode {
 
 	static public enum ClauseType {
