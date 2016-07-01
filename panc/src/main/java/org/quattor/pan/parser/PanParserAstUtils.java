@@ -350,7 +350,7 @@ public class PanParserAstUtils {
         // Verify that there is exactly one child.
         assert (ast.jjtGetNumChildren() == 1);
 
-        // Now check to see if the node is a FullTypeSpec or DML.
+        // Now check to see if the node is a FullTypeSpec or DML (valid statement).
         SimpleNode child = (SimpleNode) ast.jjtGetChild(0);
         FullType fullType = null;
         if (child instanceof ASTFullTypeSpec) {

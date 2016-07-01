@@ -25,7 +25,7 @@ import java.util.concurrent.FutureTask;
 
 /**
  * Superclass of all <code>Task</code> objects that requires all subclasses to
- * define the its executor type (queue).
+ * define its executor type (queue).
  * 
  * @author loomis
  * 

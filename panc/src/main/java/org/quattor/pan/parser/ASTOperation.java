@@ -31,6 +31,8 @@ import org.quattor.pan.dml.Operation;
  */
 public class ASTOperation extends SimpleNode {
 
+	// PLUS and MINUS are unary operations.
+	// DEFAULT are the default assigned values.
 	static public enum OperationType {
 		DML, PLUS, MINUS, NOT, BIT_NOT, FUNCTION, ASSIGN, IF, WHILE, FOR, FOREACH, VARIABLE, WITH, DEFAULT, HEREDOC, LITERAL
 	}

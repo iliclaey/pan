@@ -23,7 +23,7 @@ package org.quattor.pan.parser;
 import org.quattor.pan.utils.Range;
 
 /**
- * Represents a link, list-range or dict-range in the AST.
+ * Used for user-defined types.
  */
 public class ASTTypeClause extends SimpleNode {
 

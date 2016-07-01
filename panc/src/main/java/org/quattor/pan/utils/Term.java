@@ -24,6 +24,7 @@ import org.quattor.pan.exceptions.InvalidTermException;
 
 /**
  * This interface provides the methods path Term objects must implement.
+ * Terms are used to index pan data types (resources).
  * 
  * @author loomis
  * 

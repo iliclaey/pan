@@ -120,7 +120,7 @@ public class BuildTask extends Task<BuildResult> {
 
 			Context context = new BuildContext(compiler, template);
 
-			// Run through the building and validation phases of processing.
+			// Run through the building phase.
 			execute(context, objectName);
 			setDefaults(context, objectName);
 
