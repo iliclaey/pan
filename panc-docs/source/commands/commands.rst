@@ -57,7 +57,7 @@ reorganized and simplified options, replaces the older ``panc`` command.
     precedence over inclusion.
 
 ``--initial-data=``
-    A DML expression that evaluates to an dict. This value will be used
+    A DML expression that evaluates to a dict. This value will be used
     as the starting dict for all object templates. This is a convenient
     mechanism for injecting build numbers and other metadata in the
     profiles.
@@ -76,7 +76,7 @@ reorganized and simplified options, replaces the older ``panc`` command.
 ``--formats=``
     A comma separated list of desired output formats. Allowed values are
     "pan", "pan.gz", "xml", "xml.gz", "json", "json.gz", "txt", "dep"
-    and "dot". The default is value is "pan,dep".
+    and "dot". The default value is "pan,dep".
 
 ``--java-opts=``
     List of options to use when starting the java virtual machine. These
@@ -158,12 +158,12 @@ panc-annotations
 Description
 -----------
 
-The ``panc-annotations`` command will process the annotations contains
+The ``panc-annotations`` command will process the annotations contained
 within pan configuration files within the given base directory.
 
 ``--base-dir=``
     Defines a base directory containing all pan configuration files to
-    process. The default is value is the current working directory.
+    process. The default value is the current working directory.
 
 ``--output-dir=``
     Set where the annotation files will be written. If this option is

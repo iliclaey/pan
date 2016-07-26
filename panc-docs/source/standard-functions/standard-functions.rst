@@ -174,7 +174,7 @@ dict **create** (string *tpl_name*, ...)
 Description
 -----------
 
-The ``create`` function will return an dict from the named structure
+The ``create`` function will return a dict from the named structure
 template. The optional additional arguments are key, value pairs that
 will be added to the returned dict, perhaps overwriting values from the
 structure template. The keys must be strings that contain valid dict
@@ -290,7 +290,7 @@ dict
 Name
 ----
 
-dict -- create an dict from the arguments
+dict -- create a dict from the arguments
 
 Synopsis
 --------
@@ -392,7 +392,7 @@ Description
 -----------
 
 This function escapes non-alphanumeric characters in the argument so
-that it can be used inside paths, for instance as an dict key.
+that it can be used inside paths, for instance as a dict key.
 Non-alphanumeric characters are replaced by an underscore followed by
 the hex value of the character. If the string begins with a digit, the
 initial digit is also escaped. If the argument is the empty string, the
@@ -528,7 +528,7 @@ then it will also set the variable identified by ``key`` to the child's
 index and the variable identified by ``value`` to the child's value.
 Either ``key`` or ``value`` may be ``undef``, in which case no
 assignment is made. For a list resource ``key`` is the child's numeric
-index; for an dict resource, the string value of the key itself. An
+index; for a dict resource, the string value of the key itself. An
 example of using ``first`` with a list:
 
 ::
@@ -543,7 +543,7 @@ example of using ``first`` with a list:
     };
     # value of sum will be 15
 
-An example of using ``first`` with an dict:
+An example of using ``first`` with a dict:
 
 ::
 
@@ -904,7 +904,7 @@ is\_dict
 Name
 ----
 
-is\_dict -- checks to see if the argument is an dict
+is\_dict -- checks to see if the argument is a dict
 
 Synopsis
 --------
@@ -914,7 +914,7 @@ boolean **is\_dict** (element *arg*)
 Description
 -----------
 
-The ``is_dict`` function will return ``true`` if the argument is an
+The ``is_dict`` function will return ``true`` if the argument is a
 dict; it will return ``false`` otherwise.
 
 .. _is_null:
@@ -1042,7 +1042,7 @@ Description
 -----------
 
 This function returns the name of the child identified by its index,
-this can be used to iterate through all the children of an dict. The
+this can be used to iterate through all the children of a dict. The
 index corresponds to the key's position in the list of all keys, sorted
 in lexical order. The first index is 0.
 

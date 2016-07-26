@@ -369,7 +369,7 @@ public class CompilerOptions {
      * A private utility function to verify that the directory is really a
      * directory, exists, and absolute.
      *
-     * @param dirs
+     * @param d
      *            directory to check
      * @param dtype
      *            name to use in case of errors

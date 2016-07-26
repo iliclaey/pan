@@ -106,8 +106,7 @@ from the path.
 
 The above will work for Bourne shells on \*nix-like operating systems;
 adjust the command for the operating system and shell that you use. Change
-the value of ``PANC_HOME`` to the directory where
-the pan compiler was unpacked.
+the value of ``PANC_HOME`` to the directory where the pan compiler was unpacked.
 
 Validating the Installation
 ---------------------------
@@ -232,7 +231,7 @@ A Whirlwind Tour
 This tour will highlight the major features of the pan language by
 showing how the configuration for a batch system for asynchronous
 handling of jobs could be described with the pan language. The
-fictitious, simplified batch system used here gives you the flavor of
+fictional, simplified batch system used here gives you a taste of
 the development process and common pan features. The description of a
 real batch system would contain significantly more parameters and
 services.
@@ -478,7 +477,7 @@ address with appropriate constraints.
 The ``batch_server`` type also defines a record with nodes and queues
 children. These are both defined to be dicts where the keys are the
 worker host name or the queue name, respectively. The notation
-``mytype{}`` defines an dict.
+``mytype{}`` defines a dict.
 
 Type batch\_queue type defines a record with the characteristics of a
 queue. Each queue can be enabled or disabled. The ``maxCpuHours`` is
@@ -595,7 +594,7 @@ Default to 1 CPU-hour for the queue execution limit.
 
 By default, a queue will be enabled.
 
-If no queues are specified, then provide an dict containing only a queue
+If no queues are specified, then provide a dict containing only a queue
 definition for the 'default' queue. Note that the actual queue
 parameters are provided by the type definition ``batch_queue``.
 
@@ -946,7 +945,7 @@ Assignment
 
 Assignment statements are used to modify a part of the configuration
 tree by replacing the subtree identified by its path by the result of
-the execution a DML block. This result can be a single property or a
+the execution of a DML block. This result can be a single property or a
 resource holding any number of elements. The unconditional assignment
 is::
 
@@ -1075,7 +1074,7 @@ See the Function section for more information on user-defined functions
 and a list of built-in functions.
 
 Note that the compiler keeps distinct function and type namespaces. One
-can define a function and type with the same names.
+can define a function and type with the same name.
 
 Type Definition
 ~~~~~~~~~~~~~~~
@@ -1368,18 +1367,18 @@ Resources
 
 There are two types of *resources* supported by pan: list and dict. A
 list is an ordered list of elements with the indexing starting at zero.
-In the above example, there are two lists ``/hardware/disks/ide`` and
-``/hardware/nic``. The order of a list is significant and maintained in
-the serialized representation of the configuration. An dict (named list)
-associates a name with an element; these are also known as hashes or
-associative arrays. One dict in the above example is ``/hardware/cpu``,
-which has ``arch``, ``cores``, ``model``, ``number``, and ``speed`` as
-children. Note that the order of an dict is *not* significant and that
-the order specified in the template file is *not* preserved in the
-serialized version of the configuration. Although the algorithm for
-ordering the children of an dict in the serialized file is not
-specified, the pan compiler guarantees a *consistent* ordering of the
-same children from one compilation to the next.
+In :ref:`this <list-example-label>` example, there are two lists
+``/hardware/disks/ide`` and ``/hardware/nic``. The order of a list is
+significant and maintained in the serialized representation of the
+configuration. A dict (named list) associates a name with an element;
+these are also known as hashes or associative arrays. One dict in the
+above example is ``/hardware/cpu``, which has ``arch``, ``cores``,
+``model``, ``number``, and ``speed`` as children. Note that the order
+of a dict is *not* significant and that the order specified in the
+template file is *not* preserved in the serialized version of the
+configuration. Although the algorithm for ordering the children of a
+dict in the serialized file is not specified, the pan compiler guarantees
+a *consistent* ordering of the same children from one compilation to the next.
 
 Within a given path, lists and dicts can be distinguished by the names
 of their children. Lists always have children whose names are valid long
@@ -1393,7 +1392,7 @@ children::
     '/mylist/0x2' = 'hexadecimal index';
 
 The indices can be specified in decimal, octal, or hexadecimal. The
-names of children in an dict must begin with a letter or underscore.
+names of children in a dict must begin with a letter or underscore.
 
 Special Types
 -------------
@@ -1443,7 +1442,7 @@ As a first approximation, variables work the way you expect them to
 work. They can contain properties and resources and you can easily
 access resource children using square brackets::
 
-    # populate /table which is an dict
+    # populate /table which is a dict
     ’/table/red’ = ’rouge’;
     ’/table/green’ = ’vert’;
 
@@ -1638,7 +1637,7 @@ list or dict. The syntax is::
     foreach (key; value; resource) body-dml;
 
 This will cause the body-dml to be executed once for each element in
-resource (a list or dict). The local variables ``key`` and ``value``
+a resource (a list or dict). The local variables ``key`` and ``value``
 (you can choose these names) will be set at each iteration to the key
 and value of the element. For a list, the ``key`` is the element's
 index. The iteration will always occur in the natural order of the
@@ -1762,15 +1761,15 @@ Table: Encoding and Decoding Functions
 +================+===========================================================+
 | :ref:`append`  | Add a value to the end of a list.                         |
 +----------------+-----------------------------------------------------------+
-| :ref:`create`  | Create an dict from the named structure template.         |
+| :ref:`create`  | Create a dict from the named structure template.         |
 +----------------+-----------------------------------------------------------+
 | :ref:`first`   | Initialize an iterator over a resource. Returns a boolean |
 |                | to indicate if more values exist in the resource.         |
 +----------------+-----------------------------------------------------------+
-| :ref:`dict`    | Create an dict from the given key/value pairs given as    |
+| :ref:`dict`    | Create a dict from the given key/value pairs given as    |
 |                | arguments.                                                |
 +----------------+-----------------------------------------------------------+
-| :ref:`key`     | Find the n'th key in an dict.                             |
+| :ref:`key`     | Find the n'th key in a dict.                             |
 +----------------+-----------------------------------------------------------+
 | :ref:`length`  | Get the number of elements in the given resource.         |
 +----------------+-----------------------------------------------------------+
@@ -1820,7 +1819,7 @@ Table: Resource Manipulation Functions
 |                    | does not exist, the function will return false rather     |
 |                    | than raising an error.                                    |
 +--------------------+-----------------------------------------------------------+
-| :ref:`is_dict`     | Check if the argument is an dict. If the argument is a    |
+| :ref:`is_dict`     | Check if the argument is a dict. If the argument is a    |
 |                    | simple variable reference and the referenced variable     |
 |                    | does not exist, the function will return false rather     |
 |                    | than raising an error.                                    |
@@ -1944,7 +1943,7 @@ effects. For example, the call::
 
     f(null);
 
-will result is an empty ``ARGV`` list because the null value deletes the
+will result in an empty ``ARGV`` list because the null value deletes the
 nonexistent element ``ARGV[0]``.
 
 The pan language does *not* check the number or types of arguments
@@ -2098,7 +2097,7 @@ configuration::
 Values associated to this type must be a string ending with 'r'; the
 value must be a valid path that references an unsigned long value.
 
-Slightly more complex is to create uniform collections::
+It is slightly more complex to create uniform collections::
 
     type long_list = long[10];
     type matrix = long[3][4];
@@ -2109,7 +2108,7 @@ Here all of the elements of the collection have the same type. The last
 example shows that previously-defined, user types can be used as easily
 as the built-in primitive types.
 
-A record is an dict that explicitly names and types its children. A
+A record is a dict that explicitly names and types its children. A
 record is by far, the most frequently encountered type definition. For
 example, the type definition::
 
@@ -2120,7 +2119,7 @@ example, the type definition::
       'fpu' ? boolean
     };
 
-defines an dict with four children named 'vendor', 'model', etc. The
+defines a dict with four children named 'vendor', 'model', etc. The
 first three fields use a colon (":") in the definition and are
 consequently required fields; the last uses a question mark ("?") and is
 optional. As defined, no other children may appear in dicts of this
@@ -2518,6 +2517,8 @@ template.
       'hardware' : hardware
     };
 
+.. _list-example-label:
+
 The main object template then becomes::
 
     object template nfsserver.example.org;
@@ -2586,7 +2587,7 @@ Structure Templates
 Sites usually buy many identical machines in a single purchase, so much
 of the hardware configuration for those machines is the same. Another
 mechanism that can be exploited to reuse configuration parameters is a
-``structure`` template. Such a template defines an dict that is
+``structure`` template. Such a template defines a dict that is
 initially independent of the configuration tree itself. For our
 scenario, let us assume that the four machines have identical RAM, CPU,
 and disk configurations; the NIC and location information is different
@@ -2872,7 +2873,7 @@ build numbers, build times, build machines, etc. This can be achieved by
 setting the root element that is used to start the build of all
 profiles. Use the ``rootElement`` attribute for ant and the
 ``--initial-data`` option for the command line. The value must be a DML
-expression that evaluates to an dict. For example, this expression
+expression that evaluates to a dict. For example, this expression
 
 ::
 
